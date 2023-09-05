@@ -1,12 +1,31 @@
 import styles from './Navbar.module.css'
 import { ActiveLink } from './ActiveLink'
 
+const navItems = [
+  {
+    text: 'Home',
+    href: '/',
+  },
+  {
+    text: 'About',
+    href: '/about',
+  },
+  {
+    text: 'Contact',
+    href: '/contact',
+  },
+  {
+    text: 'Pricing',
+    href: '/pricing',
+  }
+]
+
 export const Navbar = () => {
   return (
-    <nav className={ styles['menu-container'] }>
-      <ActiveLink href="/" text="Home" />
-      <ActiveLink href="/about" text="About" /> 
-      <ActiveLink href="/contact" text="Contact" /> 
+    <nav className={styles['menu-container']}>
+      {
+        navItems.map((item) => <ActiveLink {...item} />)
+      }
     </nav>
   )
 }
