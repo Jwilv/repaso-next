@@ -1,5 +1,10 @@
+import { FC } from "react"
 
-export const DarkLayout = ({ children }) => {
+interface DarkLayoutProps {
+    children: React.ReactNode
+}
+
+export const DarkLayout = ({ children }: DarkLayoutProps) => {
     return (
         <div
             style={{

@@ -2,7 +2,11 @@ import Head from 'next/head'
 import styles from './MainLayout.module.css'
 import { Navbar } from '../Navbar'
 
-export const MainLayout = ({ children }) => {
+interface MainLayoutProps {
+    children: React.ReactNode
+}
+
+export const MainLayout = ({ children } : MainLayoutProps) => {
     return (
         <>
             <Head>

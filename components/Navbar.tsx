@@ -1,7 +1,12 @@
 import styles from './Navbar.module.css'
 import { ActiveLink } from './ActiveLink'
 
-const navItems = [
+interface Items {
+  text: string
+  href: string
+}
+
+const navItems : Items[] = [
   {
     text: 'Home',
     href: '/',

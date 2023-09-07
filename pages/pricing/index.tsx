@@ -1,7 +1,8 @@
-import { DarkLayout } from '@/components/layouts/DarkLayout'
-import { MainLayout } from '@/components/layouts/MainLayout'
+
 import Link from 'next/link'
 import React from 'react'
+import { MainLayout } from '../../components/layouts/MainLayout'
+import { DarkLayout } from '../../components/layouts/DarkLayout'
 
 const PricingPage = () => {
     return (
@@ -13,7 +14,7 @@ const PricingPage = () => {
         </div>
     )
 }
-PricingPage.getLayout = (page)=>{
+PricingPage.getLayout = (page : JSX.Element )=>{
     return(
         <MainLayout>
             <DarkLayout>
